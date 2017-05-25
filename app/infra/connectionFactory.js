@@ -6,7 +6,7 @@ module.exports = function () {
 }
 
 function createDBConnection() {
-	if (!process.env.NODE_ENV){
+	/*if (!process.env.NODE_ENV){
 		return mysql.createConnection({
 			host: 'localhost',
 			user: 'root',
@@ -21,7 +21,7 @@ function createDBConnection() {
 			password: '0000',
 			database: 'casadocodigo_nodejs_test'
 		});
-	}
+	}*/
 	if (process.env.NODE_ENV == 'production'){
 		return mysql.createConnection({
 			host: 'us-cdbr-iron-east-03.cleardb.net',
