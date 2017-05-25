@@ -23,13 +23,11 @@ function createDBConnection() {
 		});
 	}
 	if (process.env.NODE_ENV == 'production'){
-		var url = process.env.CLEARDB_DATABASE_URL;
-		var grupos = url.match(/mysql:\/\/(.*):(.*)@(.*)\/(.*)\?/);
 		return mysql.createConnection({
-			host: grupos[3],
-			user: grupos[1],
-			password: grupos[2],
-			database: grupos[4]
+			host: 'us-cdbr-iron-east-03.cleardb.net',
+			user: 'b50ac1a094b160',
+			password: 'b613f940',
+			database: 'heroku_662f199990be4d6'
 		});
 	}
 }
